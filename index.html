@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>longest words</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="blahblahblah">Longest words in English</h1>
+    <p class="blahblahblah">This the website that will tell you a lot of the longest words in English in order!
+        This website has 2 sections  the actual words and something I call partial words.
+        Partial words are words that wouldn't be in the dictionary, like names of countries, states and so on.
+        Some examples are England, France and London. Click the buttons below for the type of words.
+    </p>
+ 
+<form>
+    <label>
+        <input type='radio' name='content' id='radio1' onchange="handleCheckRadio">
+        actual
+    </label>
+    <label>
+        <input type='radio' name='content' id='radio2'>
+        partial
+    </label>   
+    
+    <!-- <button onchange="handleCheckRadio" id="radio1">hey dude</button> -->
+
+
+</form>
+
+<div id='content1' style='display:none'>
+    <p>hello.</p>
+ </div>
+   
+ <div id='content2' style='display:none'>
+    <ol>
+    <p><h2>
+    llanfair­pwllgwyngyll­gogery­chwyrn­drobwll­llan­tysilio­gogo­goch
+    </h2>
+    <p> 
+        llanfair­pwllgwyngyll­gogery­chwyrn­drobwll­llan­tysilio­gogo­goch is the longest partial word in English.
+        It is the name of a welsh town it has 58 letters, 13 vowels and 45 consonants but would only be 38 consonants and 51 letters in the welsh language because they treat the digraphs "ch" and "ll" as single letters.
+
+     </p>
+    <h2>
+        Aequeosalinocalcalinoceraceoaluminosocupreovitriolic
+     </h2>
+     <p>
+        Aequeosalinocalcalinoceraceoaluminosocupreovitriolic is the longest actual word in the english dictionary.
+        it is a term coined by Dr. Edward Strother and is used to describe the spa waters in Bath, England which actually were formed by the romans because it was on top of the only hot spring in England (almost the UK but Wales also has one).
+
+     </p>
+    <h2> 
+        pneumonoultramicroscopicsilicovolcanoconiosis
+    </h2>
+    <h2>
+        Chargoggagoggmanchauggauggagoggchaubunagungamaugg
+    </h2>
+    <h2>
+        hippopotomonstrosesquippedaliophobia
+    </h2>
+    <h2>
+        supercalifragilisticexpialidocious
+    </h2>
+    <h2>
+        dichlorodiphenyltrichloroethane
+    </h2>
+    <h2>
+        hippopotomonstrosesquippedalian
+    </h2>
+    <h2>
+        pseudopseudohypoparathyroidism
+    </h2>
+    <h2>
+        floccinoccipilification
+    </h2>
+    <h2>
+        antidisestablishmentarianism
+    </h2></p>
+</ol>
+ </div>
+
+
+   <script>
+console.log(content1)
+if (content1.checked){
+
+}
+    document.getElementById("radio1").addEventListener("click", handleCheckRadio)
+    document.getElementById("radio2").addEventListener("click", handleCheckRadio)
+
+    function handleCheckRadio(e) {
+
+        console.log("e",e)
+        console.log("e.target.id",e.target.id)
+
+        const id_of_the_radio_to_show = e.target.id
+        // const is_radio_checked = e.target.checked
+
+        console.log("checked1", document.getElementById('radio2').checked)
+        console.log("checked2", document.getElementById('radio2').checked)
+
+        if (id_of_the_radio_to_show == "radio2") {
+            document.getElementById('content2').style.display = 'block';
+            document.getElementById('content1').style.display = 'none';
+        } 
+        if (id_of_the_radio_to_show == "radio1") {
+            document.getElementById('content1').style.display = 'block';  
+            document.getElementById('content2').style.display = 'none'; 
+        }
+    }
+
+    
+ 
+   </script>
+
+</body>
+</html>
